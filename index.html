@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection and Teacher Assignment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Course Selection and Teacher Assignment System</h1>
+    </header>
+
+    <!-- Course Selection Form -->
+    <section class="course-selection">
+        <h2>Select Courses and Teachers</h2>
+        <form id="course-selection-form">
+            <!-- Theory Courses Selection (4 courses) -->
+            <h3>Select Theory Courses</h3>
+            <div class="course-group">
+                <label for="theory-course-1">Theory Course 1:</label>
+                <select id="theory-course-1" class="course-select" onchange="loadTeachers(this.value, 'teacher-theory-1')">
+                    <option value="">--Select a course--</option>
+                    <option value="1">Data Structures</option>
+                    <option value="2">Operating Systems</option>
+                    <option value="3">Database Systems</option>
+                    <option value="4">Computer Networks</option>
+                    <option value="5">Algorithms</option>
+                    <option value="6">Software Engineering</option>
+                </select>
+                <label for="teacher-theory-1">Select Theory Teacher 1:</label>
+                <select id="teacher-theory-1" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <div class="course-group">
+                <label for="theory-course-2">Theory Course 2:</label>
+                <select id="theory-course-2" class="course-select" onchange="loadTeachers(this.value, 'teacher-theory-2')">
+                    <option value="">--Select a course--</option>
+                    <option value="1">Data Structures</option>
+                    <option value="2">Operating Systems</option>
+                    <option value="3">Database Systems</option>
+                    <option value="4">Computer Networks</option>
+                    <option value="5">Algorithms</option>
+                    <option value="6">Software Engineering</option>
+                </select>
+                <label for="teacher-theory-2">Select Theory Teacher 2:</label>
+                <select id="teacher-theory-2" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <div class="course-group">
+                <label for="theory-course-3">Theory Course 3:</label>
+                <select id="theory-course-3" class="course-select" onchange="loadTeachers(this.value, 'teacher-theory-3')">
+                    <option value="">--Select a course--</option>
+                    <option value="1">Data Structures</option>
+                    <option value="2">Operating Systems</option>
+                    <option value="3">Database Systems</option>
+                    <option value="4">Computer Networks</option>
+                    <option value="5">Algorithms</option>
+                    <option value="6">Software Engineering</option>
+                </select>
+                <label for="teacher-theory-3">Select Theory Teacher 3:</label>
+                <select id="teacher-theory-3" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <div class="course-group">
+                <label for="theory-course-4">Theory Course 4:</label>
+                <select id="theory-course-4" class="course-select" onchange="loadTeachers(this.value, 'teacher-theory-4')">
+                    <option value="">--Select a course--</option>
+                    <option value="1">Data Structures</option>
+                    <option value="2">Operating Systems</option>
+                    <option value="3">Database Systems</option>
+                    <option value="4">Computer Networks</option>
+                    <option value="5">Algorithms</option>
+                    <option value="6">Software Engineering</option>
+                </select>
+                <label for="teacher-theory-4">Select Theory Teacher 4:</label>
+                <select id="teacher-theory-4" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <!-- Lab Courses Selection (2 courses) -->
+            <h3>Select Lab Courses</h3>
+            <div class="course-group">
+                <label for="lab-course-1">Lab Course 1:</label>
+                <select id="lab-course-1" class="course-select" onchange="loadTeachers(this.value, 'teacher-lab-1')">
+                    <option value="">--Select a course--</option>
+                    <option value="7">Programming Lab</option>
+                    <option value="8">Database Lab</option>
+                    <option value="9">Operating Systems Lab</option>
+                </select>
+                <label for="teacher-lab-1">Select Lab Teacher 1:</label>
+                <select id="teacher-lab-1" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <div class="course-group">
+                <label for="lab-course-2">Lab Course 2:</label>
+                <select id="lab-course-2" class="course-select" onchange="loadTeachers(this.value, 'teacher-lab-2')">
+                    <option value="">--Select a course--</option>
+                    <option value="7">Programming Lab</option>
+                    <option value="8">Database Lab</option>
+                    <option value="9">Operating Systems Lab</option>
+                </select>
+                <label for="teacher-lab-2">Select Lab Teacher 2:</label>
+                <select id="teacher-lab-2" class="teacher-select">
+                    <option value="">--Select a teacher--</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Teacher Profile Section (for theory and lab teachers) -->
+    <section class="teacher-profile" id="teacher-profiles" style="display: none;">
+        <h2>Selected Teachers Profiles</h2>
+        <div id="teacher-info" class="newcolor"></div>
+    </section>
+
+
+    <section class="feedback-section">
+        <h2>Submit Feedback</h2>
+        <form id="feedback-form">
+            <label for="feedback-text">Feedback:</label>
+            <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
+            <label for="rating">Rating:</label>
+            <select id="rating">
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
